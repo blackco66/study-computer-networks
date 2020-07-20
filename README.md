@@ -10,7 +10,7 @@
 
 [참고 레포](https://github.com/Yooii-Studios/Clean-Code)를 참조하여 push한 md파일의 link를 여기에 목차 형식으로 달아주세요.
 
-- [roadmap-1: What is internet?](chapter1/roadmap-1)
+- [roadmap-1: What is internet?](chapter1/roadmap-1.md)
 
 ## Resources
 
