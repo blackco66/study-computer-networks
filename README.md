@@ -12,6 +12,7 @@
 
 - [roadmap-1: What is internet?](chapter1/roadmap-1.md)
 - [roadmap-2: Network edge, Network core](chapter1/roadmap-2.md)
+- [roadmap-3: Delay, loss, throughput in networks, Protocol layers, service models, Networks under attack: security, Internet history](chapter1/roadmap-3.md)
 
 ## Resources
 
