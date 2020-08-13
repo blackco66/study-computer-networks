@@ -85,23 +85,23 @@ Response time : HTTP client가 HTTP server에게 object의 url을 전송하고 H
      server는 파일 경로(/index.html) 사용     
      ex)       
         * static content    
-         http://www.cs.cmu.edu:80/index.html
-         http://www.cs.cmu.edu/index.html
-         http://www.cs.cmu.edu  
+         http://www.cs.cmu.edu:80/index.html         
+         http://www.cs.cmu.edu/index.html        
+         http://www.cs.cmu.edu         
         * dynamic content                               
         http://www.cs.cmu.edu:8000/cgi-bin/proc?15000&213  
 
     * HTTP methods   
   ![HTTP_request_message](../images/3-2-6.png)
-    1) GET: static or dynamic content- url page 요청, 오직 데이터를 받음
-    2) POST: form input을 담은 entity 제출
-    3) HEAD: server에게 response는 보내되 요청한 object를 보내지는 않아도 됨(Get과 비슷하지만, response body에 data는 없음)
-    4) PUT: 파일을 쓴다
-    5) DELETE: 파일 삭제 요구
-    6) CONNECT: 목적지 서버로 연결
-    7) OPTION: 목적지와 통신 설정시 사용
-    8) TRACE: response body에서 request를 echo한다(경로를 따라서 메세지 loop-back 테스트)
-    9) PATCH: 리소스의 부분만 수정시 사용
+    1. GET: static or dynamic content- url page 요청, 오직 데이터를 받음
+    2. POST: form input을 담은 entity 제출
+    3. HEAD: server에게 response는 보내되 요청한 object를 보내지는 않아도 됨(Get과 비슷하지만, response body에 data는 없음)
+    4. PUT: 파일을 쓴다
+    5. DELETE: 파일 삭제 요구
+    6. CONNECT: 목적지 서버로 연결
+    7. OPTION: 목적지와 통신 설정시 사용
+    8. TRACE: response body에서 request를 echo한다(경로를 따라서 메세지 loop-back 테스트)
+    9. PATCH: 리소스의 부분만 수정시 사용
 
 2) request headers       
    **header name : header data**     
