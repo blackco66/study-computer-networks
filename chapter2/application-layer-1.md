@@ -114,7 +114,7 @@ well known port number
   - 최초의 HTTP
   - 커넥션 한 번에 object 하나만 전송하고 닫힘: 매우 비효율적
   -동작
-  ![nonpersis-http](../images/3-1-3.jpg)
+  ![nonpersis-http](../images/3-1-3.JPG)
     - 1. tcp 커넥션을 맺으면 그 커넥션의 소켓이 생성이 되고 
     - 2. http 메세지가 내려와서 서버측 소켓으로 전달
     - 3. base html이 담긴 메시지를 다시 클라이언트 쪽으로 전달 서버 쪽은 여기서 커넥션을 닫는다 
