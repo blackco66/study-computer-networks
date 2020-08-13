@@ -129,7 +129,7 @@ Response time : HTTP client가 HTTP server에게 object의 url을 전송하고 H
   GET/POST/HEAD(서버에서 object를 요청)
 * **HTTP/1.1**           
    persistent connection 지원.     
-   GET/POST/HEAD + PUT/DELETE(URL field에 요청)
+   GET/POST/HEAD + PUT/DELETE(URL field에 요청)        
    같은 connection에 대해 여러 transaction(Connection: Keep-Alive)   
    chuncked encoding(Transfer-Encoding: chunked)
 
