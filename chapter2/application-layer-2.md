@@ -80,7 +80,7 @@ Response time : HTTP client가 HTTP server에게 object의 url을 전송하고 H
 - ![HTTP_request_message](../images/3-2-5.png)
 
 1) request line          
-    **method(GET|POST|PUT|DELETE|OPTIONS|HEAD|PUT|DELETE|TRACE) + URL(얻고싶은 파일) + version(HTTP/1.0 | HTTP/1.1)**
+    **method(GET|POST|HEAD|PUT|DELETE|CONNECT|OPTIONS|TRACE|PATCH) + URL(얻고싶은 파일) + version(HTTP/1.0 | HTTP/1.1)**
    - URL(Universal Resource Locator) 서버에 의해서 관리되는 각 file      
      client는 서버의 host 이름(www.cmu.edu) + port(80) 사용    
      server는 파일 경로(/index.html) 사용     
@@ -100,7 +100,7 @@ Response time : HTTP client가 HTTP server에게 object의 url을 전송하고 H
     - PUT: 파일을 쓴다
     - DELETE: 파일 삭제 요구
     - CONNECT: 목적지 서버로 연결
-    - OPTION: 목적지와 통신 설정시 사용
+    - OPTIONS: 목적지와 통신 설정시 사용
     - TRACE: response body에서 request를 echo한다(경로를 따라서 메세지 loop-back 테스트)
     - PATCH: 리소스의 부분만 수정시 사용
 
