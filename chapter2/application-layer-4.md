@@ -72,7 +72,7 @@
     * name server를 만들 때 IP 하나에 여러 개 이름이 가능하기 때문에 하나는 정식 이름 나머지는 alias명
 
 - application layer protocol     
-  ![Response_time](../images/5-2-11.png)
+  ![Response_time](../images/5-2-11.png)            
    다른 app layer protocol 들이 HTTP, SMTP 등 사용자가 제공한 host name을 IP로 변환하는데 이용 
    network edge에서 구현, (= end system: server, client )
 
