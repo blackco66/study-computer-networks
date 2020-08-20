@@ -35,14 +35,6 @@
 - Post Office Protocol[RFC 1939] authorization, download 
 - POP의 3번째 버전: POP3  
 - 클라이언트 PC로 메일을 직접 다운로드  
-* authorization phase 
-  1) client commands - user(username 선언), pass(password)   
-  2) server responses - +OK, -ERR 
-* transaction phase   
-  1) list     
-  2) retr - retrieve     
-  3) dele - delete     
-  4) quit     
         
 *   *stateless across sessions*     
   ![Response_time](../images/5-2-2.png)
