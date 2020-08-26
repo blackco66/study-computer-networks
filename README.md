@@ -18,6 +18,8 @@
 - [application layer-3: FTP, Electronic mail: SMTP](chapter2/application-layer-3.md)
 - [application layer-4: Electronic mail: POP3, IMAP, DNS](chapter2/application-layer-4.md)
 - [application layer-5: P2P applications](chapter2/application-5.md)
+- [application layer-6: Socket programming with UDP and TCP](chapter2/application-layer-6.md)
+- [transport layer-1: Transport-layer services,Multiplexing and demultiplexing](chapter3/transport-layer-1.md)
 
 ## Resources
 
