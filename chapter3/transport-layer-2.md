@@ -25,19 +25,19 @@
   
 
 ## 1.Multiplexing & Demultiplexing in UDP & TCP
-1. Connectionless Demux
+1. **Connectionless Demux**
   ![Response_time](../images/6-2-2.png)
   - server socket은 '하나'만 열림! -> 이걸 통해서 client들 접근
-  - **dest IP & port 를 보고 Demultiplexing! 
+  - **dest IP & port** 를 보고 Demultiplexing! 
 
-2. Connection-oriented Demux 
+2. **Connection-oriented Demux** 
     ![Response_time](../images/6-2-3.png)  
   - server socket은 '여러 개' 열림! -> 특정 client를 위한 특정 socket 즉, 하나의 app에 '여러' socket 가능! 
   - client와 contact 할 때마다 socket을 열어줘야 한다. 
   - **source IP & port, dest IP & port** 를 모두 보고 Demultiplexing!
 
 ## 2.Connectionless Transport: UDP
-1. UDP(User Datagram Protocol)
+  **UDP(User Datagram Protocol)**
    - 데이터를 datagram 단위로 처리하는 protocol
    - datagram: *패킷 교환에서 각각 독립적으로 취급되는 개별적인 패킷을 의미*
   - **Connectionless** 각 패킷은 다른 경로로 전송되고, 독립적인 관계를 가짐
@@ -58,7 +58,7 @@
   - reliable transfer   
     - data의 무결성이 중요한 경우 사용. reliability check하는 function을 사용하고 있고, error 발생 시 recover하는 방법을 보유하기에 이런 overhead 피하기 위해서 사용하는 경우도 있다. 
   
-  **장점**
+    **장점**
     ![Response_time](../images/6-2-4.png)
     - short delay(no connection - 1 RTT), simple(independent), small header size(traffic overhead 작음)
 
@@ -87,7 +87,7 @@
   - **Point to Point** 
     - 1 sender - 1 receiver     
   - **Reliable & in-order**     
-    - flow controll & congestion controll에 따라서 Buffer에 저장한 data byte stream을 전송    
+    - flow control & congestion control에 따라서 Buffer에 저장한 data byte stream을 전송    
   - **Pipelined** : window 크기 만큼 pipelining for throughput     
   - **Full duplex data**    
     - 일뱡향이 아닌, client-server 양쪽에서 데이터 전송 가능     
