@@ -1,21 +1,21 @@
 ## 목차
 - [목차](#목차)
 - [1.Socket Programming](#1socket-programming)
-  - [Socket Programming with UDP](#socket-programming-with-udp)
+  - [with UDP](#with-udp)
   - [with TCP](#with-tcp)
 
 ## 1.Socket Programming
 
 개발자가 작성하는 어플리케이션 계층과 운영체제가 담당하는 transport 계층 사이의 인터페이스인 **소켓**
 
-### Socket Programming with UDP
+### with UDP
 
 * no handshaking
 * 각 데이터마다 목적지 ip, 포트 넘버를 붙여서 보내게 됨 
 * 서버는 받은 segment(packet)로부터 클라이언트의 포트 번호를 알아내서 response를 전송
 * 전송에 대한 보장이 없음
 
-![withudp]('../../images/6-1-1.png')
+![withudp](../images/6-1-1.png)
 
 1. 서버 프로세스가 먼저 실행되기 시작해서 서버 소켓 create
 2. 클라이언트 소켓 create 네트워크가 서버 ip, 포트 번호를 가지고 있는 datagram을 인터넷이 서버에 전달
