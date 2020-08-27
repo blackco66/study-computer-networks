@@ -65,8 +65,8 @@
   **UDP Checksum** 
   - Checksum: network를 통해서 packet을 송수신 할 때, header나 data가 손상되지 않았다는 것을 보증하기 위해서 사용
   - 계산과정
-    1. Sender & Receiver: 16 bit 계산(bitwise addition) with one's complement method 
-    2. 계산 결과가 같다면 오류 X 판단
+    - Sender & Receiver: 16 bit 계산(bitwise addition) with one's complement method 
+    - 계산 결과가 같다면 오류 X 판단
         - 하지만, 계산 결과값은 같지만 계산 과정 상에서 오류가 있을 수 있음. -> UDP protocol은 이를 위한 조치를 취하지는 않음. 
   - one's complement -> 1의 보수
     ![Response_time](../images/6-2-5.png)
@@ -75,16 +75,17 @@
 
 ## 3.Principles of Reliable Data Transfer
   ![Response_time](../images/6-2-7.png)
-  1. Checksum: 전송된 packet에 오류가 있는지 검출 
-  2. Acknowledgement & Negative Acknowledgement: 전송을 잘 받았는지 아닌지 / 오류에 대한 정보를 알려줌
-  3. Timer: Sender가 Ack를 기다릴 때, 시간 제한을 둠(Timer Field)
-  4. Sequence Number: 이전에 전송된 packet이 다시 전송되는 경우에 이미 전송받은 packet인지 구별해줌
-  5. Pipelining: Packet <-> Ack의 효율적인 전송을 위한 pipelining
+  1. **Checksum**: 전송된 packet에 오류가 있는지 검출 
+  2. **Acknowledgement & Negative Acknowledgement**: 전송을 잘 받았는지 아닌지 / 오류에 대한 정보를 알려줌
+  3. **Timer**: Sender가 Ack를 기다릴 때, 시간 제한을 둠(Timer Field)
+  4. **Sequence Number**: 이전에 전송된 packet이 다시 전송되는 경우에 이미 전송받은 packet인지 구별해줌
+  5. **Pipelining**: Packet <-> Ack의 효율적인 전송을 위한 pipelining
       ![Response_time](../images/6-2-8.png)
       ![Response_time](../images/6-2-9.png)
 
 ## 4.TCP(Transmission Control Protocol)
-  - **Point to Point** : 1 sender - 1 receiver     
+  - **Point to Point** 
+    - 1 sender - 1 receiver     
   - **Reliable & in-order**     
     - flow controll & congestion controll에 따라서 Buffer에 저장한 data byte stream을 전송    
   - **Pipelined** : window 크기 만큼 pipelining for throughput     
@@ -101,8 +102,10 @@
       - 고정 길이 - 4 byte 단위, 일반적으로 20 byte     
         - header length = 5 * 4 bytes = 20 bytes    
       - 4 bit(1111(2) == 15) : 15 * 4 bytes = max. 60 bytes   
-    - Sequence Number: 송신자가 보내는 데이터의 시작 byte 숫자, 즉 보내는 데이터가 connection 시작 후 몇 번째 데이터인지를 표시       
-    - Acknowledgment Number: 송신자에게서 받은 데이터 byte + 1, 즉 상대방이 N-1번째 바이트까지 보냈다면, N번째 바이트를 보내야한다는 의미   
+    - Sequence Number
+      - 송신자가 보내는 데이터의 시작 byte 숫자, 즉 보내는 데이터가 connection 시작 후 몇 번째 데이터인지를 표시       
+    - Acknowledgment Number 
+      - 송신자에게서 받은 데이터 byte + 1, 즉 상대방이 N-1번째 바이트까지 보냈다면, N번째 바이트를 보내야한다는 의미   
     - Receive Window    
       - Flow control을 위한 field   
       - 남은 buffer size와 관계해서, 수용 가능한 receive window size 정보   
