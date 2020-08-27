@@ -20,6 +20,7 @@
 - [application layer-5: P2P applications](chapter2/application-5.md)
 - [application layer-6: Socket programming with UDP and TCP](chapter2/application-layer-6.md)
 - [transport layer-1: Transport-layer services,Multiplexing and demultiplexing](chapter3/transport-layer-1.md)
+- [transport layer-2: Connectionless transport: UDP, Principles of reliable data transfer, Connection-oriented transport: TCP](chapter3/transport-layer-2.md)
 
 ## Resources
 
