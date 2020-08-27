@@ -6,7 +6,7 @@
 - [1.Multiplexing & Demultiplexing in UDP & TCP](#1multiplexing--demultiplexing-in-udp--tcp)
 - [2.Connectionless Transport: UDP](#2connectionless-transport-udp)
 - [3.Principles of Reliable Data Transfer](#3principles-of-reliable-data-transfer)
-- [4. TCP(Transmission Control Protocol)](#4-tcptransmission-control-protocol)
+- [4.TCP(Transmission Control Protocol)](#4tcptransmission-control-protocol)
 
 
 ## 복습
@@ -83,48 +83,47 @@
       ![Response_time](../images/6-2-8.png)
       ![Response_time](../images/6-2-9.png)
 
-## 4. TCP(Transmission Control Protocol)
-  **Point to Point** : 1 sender - 1 receiver
-  **Reliable & in-order**
-    - flow controll & congestion controll에 따라서 Buffer에 저장한 data byte stream을 전송 
-  **Pipelined** : window 크기 만큼 pipelining for throughput
-  **Full duplex data**
-    - 일뱡향이 아닌, client-server 양쪽에서 데이터 전송 가능 
-  **Connection-oriented** : handshaking
-  **Flow controlled**
-  **Congestion controlled**
-  **Segment Structure**
-    ![Response_time](../images/6-2-10.png)
-    - 가변영역(Options) || 고정영역(나머지)
-      - 가변적인 Header로 인해 Header Length field 존재 
-    - *Header Length == Data Offset*
-      - 고정 길이 - 4 byte 단위, 일반적으로 20 byte 
-        - header length = 5 * 4 bytes = 20 bytes 
-      - 4 bit(1111(2) == 15) : 15 * 4 bytes = max. 60 bytes
-    - Sequence Number: 송신자가 보내는 데이터의 시작 byte 숫자, 즉 보내는 데이터가 connection 시작 후 몇 번째 데이터인지를 표시    
-    - Acknowledgment Number: 송신자에게서 받은 데이터 byte + 1, 즉 상대방이 N-1번째 바이트까지 보냈다면, N번째 바이트를 보내야한다는 의미
-    - Receive Window
-      - Flow control을 위한 field
-      - 남은 buffer size와 관계해서, 수용 가능한 receive window size 정보
-    - TCP flags     
-      - URG: Urgent pointer 정상인지 check하지만 실제로는 사용 X,  urgent한 데이터를 포함하여 버퍼에 있는 모든 데이터를 push한다. 단, 어떤 데이터가 urgent data인지 표시하는 pointer field를 사용한다(PSH과 다른점).
-      - ACK: ack number field 확인, 첫 SYN 일 때, ACK field도 set -> 상대방에게 받은 data 관련
-      - PSH: Push flag. 실제로 사용하진 않지만, 현재 보내는 데이터를 포함한 buffer에 있는 모든 데이터를 바로 push 해달라는 flag  
-      - RST, SYN, FIN -> Connection Flags 
-        - RST(reset): 송신자가 공식적인 종료 절차 없이 종료하길 원할 때, -> 비정상적인 세션 연결 끊기
-        - SYN(sync): connection 초기에 사용되는 field, 처음엔 seg는 임의생성, base로 이후에 데이터 전송시마다 사이즈만큼 증가 
-        - FIN(finish): TCP 연결 해제 원할 때 사용   
-    - Window size
-      - 수신 가능한 Receive window size buffer의 size를 의미
-    - Checksum
-      - segment가 정상인 것을 증명하는 field
-    ![Response_time](../images/6-2-11.png)
-    ![Response_time](../images/6-2-12.png)
+## 4.TCP(Transmission Control Protocol)
+  - **Point to Point** : 1 sender - 1 receiver     
+  - **Reliable & in-order**     
+    - flow controll & congestion controll에 따라서 Buffer에 저장한 data byte stream을 전송    
+  - **Pipelined** : window 크기 만큼 pipelining for throughput     
+  - **Full duplex data**    
+    - 일뱡향이 아닌, client-server 양쪽에서 데이터 전송 가능     
+  - **Connection-oriented** : handshaking     
+  - **Flow controlled**    
+  - **Congestion controlled**      
+  - **Segment Structure**      
+    ![Response_time](../images/6-2-10.png)      
+    - 가변영역(Options) || 고정영역(나머지)        
+      - 가변적인 Header로 인해 Header Length field 존재      
+    - *Header Length == Data Offset*    
+      - 고정 길이 - 4 byte 단위, 일반적으로 20 byte     
+        - header length = 5 * 4 bytes = 20 bytes    
+      - 4 bit(1111(2) == 15) : 15 * 4 bytes = max. 60 bytes   
+    - Sequence Number: 송신자가 보내는 데이터의 시작 byte 숫자, 즉 보내는 데이터가 connection 시작 후 몇 번째 데이터인지를 표시       
+    - Acknowledgment Number: 송신자에게서 받은 데이터 byte + 1, 즉 상대방이 N-1번째 바이트까지 보냈다면, N번째 바이트를 보내야한다는 의미   
+    - Receive Window    
+      - Flow control을 위한 field   
+      - 남은 buffer size와 관계해서, 수용 가능한 receive window size 정보   
+    - TCP flags         
+      - URG: Urgent pointer 정상인지 check하지만 실제로는 사용 X,  urgent한 데이터를 포함하여 버퍼에 있는 모든 데이터를 push한다. 단, 어떤 데이터가 urgent data인지 표시하는 pointer field를 사용한다  (PSH과 다른점).      
+      - ACK: ack number field 확인, 첫 SYN 일 때, ACK field도 set -> 상대방에게 받은 data 관련    
+      - PSH: Push flag. 실제로 사용하진 않지만, 현재 보내는 데이터를 포함한 buffer에 있는 모든 데이터를 바로 push 해달라는 flag     
+      - RST, SYN, FIN -> Connection Flags         
+          - RST(reset): 송신자가 공식적인 종료 절차 없이 종료하길 원할 때, -> 비정상적인 세션 연결 끊기     
+          - SYN(sync): connection 초기에 사용되는 field, 처음엔 seg는 임의생성, base로 이후에 데이터 전송시마다 사이즈만큼 증가         
+          - FIN(finish): TCP 연결 해제 원할 때 사용       
+    - Window size   
+      - 수신 가능한 Receive window size buffer의 size를 의미    
+    - Checksum    
+      - segment가 정상인 것을 증명하는 field    
+        ![Response_time](../images/6-2-11.png)    
+        ![Response_time](../images/6-2-12.png)    
 
   **TCP Round Trip Time & Timeout** 
-    - Ack를 계속 기다리지 않게 하기 위한 Timer로, RTT(Round Trip Time)과 관련
-    - (segment or Ack) 
-    - Too short estimation: 불필요한 retransmission 
-    - Too long estimation: segment loss에 너무 느리게 반응
-    - 예측 방법? 
-      - Sample RTT 평균을 가지고 예측한다 
+  - Ack를 계속 기다리지 않게 하기 위한 Timer로, RTT(Round Trip Time)과 관련       
+  - Too short estimation: 불필요한 retransmission         
+  - Too long estimation: segment loss에 너무 느리게 반응          
+  - 예측 방법?      
+    - Sample RTT 평균을 가지고 예측한다       
