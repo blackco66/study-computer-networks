@@ -21,6 +21,7 @@
 - [application layer-6: Socket programming with UDP and TCP](chapter2/application-layer-6.md)
 - [transport layer-1: Transport-layer services,Multiplexing and demultiplexing](chapter3/transport-layer-1.md)
 - [transport layer-2: Connectionless transport: UDP, Principles of reliable data transfer, Connection-oriented transport: TCP](chapter3/transport-layer-2.md)
+- [transport layer-3: Connection-oriented transport:TCP](chapter3/transport-layer-3.md)
 
 ## Resources
 
