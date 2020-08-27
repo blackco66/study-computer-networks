@@ -1,20 +1,7 @@
 <!-- omit in toc -->
 ## 목차
-- [](#)
-  - [5. Network Core](#5-network-core)
-    - [5.1 Circuit Switching](#51-circuit-switching)
-      - [5.1.1 FDM (Frequency Division Multiplexing)](#511-fdm-frequency-division-multiplexing)
-      - [5.1.2 TDM (Time Division Multiplexing)](#512-tdm-time-division-multiplexing)
-      - [5.1.3 WDM (Wavelength Division Multiplexing)](#513-wdm-wavelength-division-multiplexing)
-    - [5.2 Packet Switching](#52-packet-switching)
-      - [5.2.1 Store and Forwarding](#521-store-and-forwarding)
-      - [5.2.2 Queueing delay](#522-queueing-delay)
-    - [5.3 비교](#53-비교)
-  - [6. Internet Structures](#6-internet-structures)
-    - [6.1 Network of networks](#61-network-of-networks)
-    - [6.2 Tier I ISP](#62-tier-i-isp)
-    - [6.3 IXP](#63-ixp)
-    - [6.4 Content Provider Network](#64-content-provider-network)
+
+  
 
 ## 1. 강좌 목표
 
