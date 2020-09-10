@@ -22,6 +22,7 @@
 - [transport layer-1: Transport-layer services,Multiplexing and demultiplexing](chapter3/transport-layer-1.md)
 - [transport layer-2: Connectionless transport: UDP, Principles of reliable data transfer, Connection-oriented transport: TCP](chapter3/transport-layer-2.md)
 - [transport layer-3: Connection-oriented transport:TCP](chapter3/transport-layer-3.md)
+- [netwokr layer-2: what's inside a router, IP:Internet Protocol](chapter4/network-2.md)
 
 ## Resources
 
