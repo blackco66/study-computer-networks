@@ -23,6 +23,7 @@
 - [transport layer-2: Connectionless transport: UDP, Principles of reliable data transfer, Connection-oriented transport: TCP](chapter3/transport-layer-2.md)
 - [transport layer-3: Connection-oriented transport:TCP](chapter3/transport-layer-3.md)
 - [transport layer-4: Principles of congestion control TCP congestion control](chapter3/transport-layer-4.md)
+- [network layer-1: Introduction, Virtual circuit and datagram, networks](chapter4/network-layer-1.md)
 - [network layer-2: what's inside a router, IP:Internet Protocol](chapter4/network-2.md)
 - [network layer-3: IP: Internet Protocol](chapter4/network-3.md)
 
