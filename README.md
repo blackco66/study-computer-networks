@@ -26,6 +26,7 @@
 - [network layer-1: Introduction, Virtual circuit and datagram, networks](chapter4/network-layer-1.md)
 - [network layer-2: what's inside a router, IP:Internet Protocol](chapter4/network-2.md)
 - [network layer-3: IP: Internet Protocol](chapter4/network-3.md)
+- [network layer-6: Routing in the Internet](chapter4/network-6.md)
 
 ## Resources
 
