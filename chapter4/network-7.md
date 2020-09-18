@@ -27,12 +27,12 @@
   - Policy를 먼저 고려한다. BGP 프로토콜에 의한. 
   - 만약 같다면 그 다음엔 AS-PATH가 더 짧은 경로를 선택한다. 
   - 그 마저 같다면 hot-potato routing을 적용한다. -> 가장 가까운 NEXT-HOP을 가진 경로를 선택한다. 
-  - ![](../image/13-2.png)
+  - ![](../images/13-2.png)
 - Forwarding entry를 어떻게 작성할까. 
   - Shortest AS-PATH를 결정하면, NEXT-HOP을 봐야한다. 
   - ex. AS-PATH: AS2 AS17, NEXT-HOP: 111.99.86.55 
   - NEXT-HOP에 가는 최단 경로는 OSPF를 이용하여 결정한다. 
-  - ![](../image/13-3.png)
+  - ![](../images/13-3.png)
 
 ## 2. BGP routing policy 
 advertisement하는데 적용되는 policy. 
@@ -42,7 +42,7 @@ advertisement하는데 적용되는 policy.
 > 
 > Best AS path policy
 
-![](../image/13-4.png)
+![](../images/13-4.png)
 - Provider -> Customer 혹은 Provider -> Provider 로 전달된 advertisement 는 다시 Provider로 전달되지 않는다.
   - X는 자신이 알게된 route정보를 B나 C로 알려주지 않는다. 
 - A는 B, C에게 AW라는 AS-PATH를 알려준다. 그래야 B, C는 W의 존재를 알고 A를 거쳐 W로 가는 route를 사용하기 때문이다. 
@@ -60,7 +60,7 @@ advertisement하는데 적용되는 policy.
 
  
 ## 4. Broadcast and multicast routing
-![](../image/13-5.png)
+![](../images/13-5.png)
 - Broadcast - 한 source 에서 보내는 데이터를 한 네트워크 상 모든 destination 에서 받는 것 
 - Multicast - 한 source 가 보내는 데이터를 여러 destination 에서 받는 것
 - 이 두 기능은 별도의 과정 없이 uni-casting 을 통해 구현 가능. 
