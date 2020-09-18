@@ -106,7 +106,7 @@ routing algorithm과 밀접한 연관이 있으므로 라우팅 알고리즘을 
 #### global(link state algorithm):
 * 각 라우터가 속한 네트워크의 정보를 모두 가지고 있는 상태에서 consistent한 정보를 가지고 경로를 짠다.
 
-> digkstra's algorithm:
+> dijkstra's algorithm:
 > 
 > 한 소스 호스트에 대해서 그 네트워크에 있는 자기자신을 제외한 모든 노드들에 대해서 가장 가까운 데스티네이션부터 가장 짧은 루트를 계산
  
